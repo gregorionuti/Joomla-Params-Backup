@@ -1,0 +1,32 @@
+/**
+ * 
+ * @version             See field version manifest file
+ * @package             See field name manifest file
+ * @author				Gregorio Nuti
+ * @copyright			See field copyright manifest file
+ * @license             GNU General Public License version 2 or later
+ * 
+ */
+ 
+/* General */
+label.hidden,
+label[id*=hidden] {
+    display: none;
+}
+#digigreg_buttons_wrapper .button-container a[target="_blank"]::before {
+	content: "";
+}
+
+/* Restore descriptions due of Joomla 4 lack */
+.hide-aware-inline-help {
+	display: block !important;
+	margin-top: 0.5rem;
+}
+
+/* Media queries */
+@media (max-width: 767px) {
+	#digigreg_buttons_wrapper .button-container {
+		 margin-top: 5px;
+		 margin-bottom: 10px;
+	}
+}

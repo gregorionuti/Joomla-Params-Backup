@@ -1,0 +1,8 @@
+##
+# @package    See field name manifest file
+# @copyright  See field copyright manifest file
+# @license    GNU General Public License version 2 or later
+##
+
+Order allow,deny
+Deny from all

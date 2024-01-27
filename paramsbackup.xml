@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="4.0" type="plugin" group="content" method="upgrade">       
+    <name>Content - Params Backup</name>
+	<author>Digigreg</author>
+	<creationDate>Apr 2023</creationDate>
+	<copyright>Copyright Digigreg 2014-2023</copyright>
+	<authorEmail>info@digigreg.com</authorEmail>
+	<authorUrl>https://www.digigreg.com</authorUrl>
+	<version>1.0.1</version>
+    <license>GNU General Public License version 2 or later</license>
+	<description>
+        <![CDATA[
+            <strong>Instantly backup and reload extensions settings.</strong><br />
+            Save and load params of your modules, plugins, templates and components configurations, with just one click.
+        ]]>
+    </description>
+    <scriptfile>script.php</scriptfile>
+    <files>
+        <folder>assets</folder>
+        <folder>extras</folder>
+        <folder>forms</folder>
+        <folder>settings</folder>
+        <filename plugin="paramsbackup">paramsbackup.php</filename>
+        <filename>paramsbackup.xml</filename>
+    </files>
+    <languages>
+		<language tag="en-GB">language/en-GB/plg_content_paramsbackup.ini</language>
+		<language tag="en-GB">language/en-GB/plg_content_paramsbackup.sys.ini</language>
+	</languages>
+    <config>
+		<fields name="params">
+			<fieldset name="basic" addfieldpath="/plugins/content/paramsbackup/extras/elements">
+				
+				<field name="buttons_hidden" type="buttons" />
+				
+				<field name="modules" type="radio" layout="joomla.form.field.radio.switcher" default="1" label="PLG_CONTENT_PARAMSBACKUP_FIELD_MODULES_LBL" description="PLG_CONTENT_PARAMSBACKUP_FIELD_MODULES_DESC">
+                    <option value="0">JNO</option>
+                    <option value="1">JYES</option>
+				</field>
+				
+				<field name="plugins" type="radio" layout="joomla.form.field.radio.switcher" default="1" label="PLG_CONTENT_PARAMSBACKUP_FIELD_PLUGINS_LBL" description="PLG_CONTENT_PARAMSBACKUP_FIELD_PLUGINS_DESC">
+                    <option value="0">JNO</option>
+                    <option value="1">JYES</option>
+				</field>
+				
+				<field name="templates" type="radio" layout="joomla.form.field.radio.switcher" default="1" label="PLG_CONTENT_PARAMSBACKUP_FIELD_TEMPLATES_LBL" description="PLG_CONTENT_PARAMSBACKUP_FIELD_TEMPLATES_DESC">
+                    <option value="0">JNO</option>
+                    <option value="1">JYES</option>
+				</field>
+				
+				<field name="configurations" type="radio" layout="joomla.form.field.radio.switcher" default="0" label="PLG_CONTENT_PARAMSBACKUP_FIELD_CONFIGURATIONS_LBL" description="PLG_CONTENT_PARAMSBACKUP_FIELD_CONFIGURATIONS_DESC">
+                    <option value="0">JNO</option>
+                    <option value="1">JYES</option>
+				</field>
+				
+				<field type="spacer" name="extra-hr" hr="true" />
+				
+				<field name="debug" type="radio" layout="joomla.form.field.radio.switcher" default="0" label="PLG_CONTENT_PARAMSBACKUP_FIELD_DEBUG_LBL" description="PLG_CONTENT_PARAMSBACKUP_FIELD_DEBUG_DESC">
+                    <option value="0">JNO</option>
+                    <option value="1">JYES</option>
+				</field>
+				
+				<field name="donation" type="radio" layout="joomla.form.field.radio.switcher" default="1" label="PLG_CONTENT_PARAMSBACKUP_FIELD_DONATION_LBL" description="PLG_CONTENT_PARAMSBACKUP_FIELD_DONATION_DESC">
+                    <option value="0">JNO</option>
+                    <option value="1">JYES</option>
+				</field>
+				
+				<field type="spacer" name="advanced-hr" hr="true" />
+				
+				<field name="inclusions" type="textarea" rows="5" filter="raw" label="PLG_CONTENT_PARAMSBACKUP_FIELD_INCLUSIONS_LBL" description="PLG_CONTENT_PARAMSBACKUP_FIELD_INCLUSIONS_DESC" />
+				
+				<field name="exclusions" type="textarea" rows="5" filter="raw" label="PLG_CONTENT_PARAMSBACKUP_FIELD_EXCLUSIONS_LBL" description="PLG_CONTENT_PARAMSBACKUP_FIELD_EXCLUSIONS_DESC" />
+				
+				<field name="asset_hidden" type="asset" />
+                
+                <field name="support_hidden" type="support" />
+                
+			</fieldset>
+		</fields>
+	</config>
+	<updateservers>
+    	
+		<server type="extension" priority="2" name="Params Backup">https://www.digigreg.com/xml/plg_params_backup.xml</server>
+		
+    </updateservers>
+</extension>
