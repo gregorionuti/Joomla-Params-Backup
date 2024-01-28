@@ -13,21 +13,22 @@ This **backup plugin for Joomla** inject a new tab into the forms of modules, pl
 
 The tab contains the three main buttons of the plugin: save, load, delete. These are used respectively to save the current settings of the extension you are working on, to load previously saved settings, to delete a previously saved and no longer needed file.
 
-#### Compatibility
-- Joomla! version: Joomla! 3, Joomla! 4
-- PHP version: 7+, 8+
+![GitHub Release](https://img.shields.io/github/v/release/gregorionuti/Joomla-Params-Backup)
+![GitHub last commit (branch)](https://img.shields.io/github/last-commit/gregorionuti/Joomla-Params-Backup/main)
+![GitHub License](https://img.shields.io/github/license/gregorionuti/Joomla-Params-Backup)
+![Static Badge](https://img.shields.io/badge/joomla-cadetblue?label=platform)
+![Static Badge](https://img.shields.io/badge/3.10%2B%20%7C%204.0%2B-blue?logo=joomla&logoColor=white&label=joomla)
+![Static Badge](https://img.shields.io/badge/plugin-darkviolet?logo=joomla&logoColor=white&label=type)
+![Static Badge](https://img.shields.io/badge/7.0%2B%20%7C%208.0%2B-purple?logo=php&logoColor=white&label=php)
 
 #### Links
-- Homepage: [Params Backup on Digigreg](https://www.digigreg.com/en/products/joomla-plugins/params-backup.html)
-- JED page: [Params Backup on Joomla Extensions Directory](https://extensions.joomla.org/extension/params-backup/)
-- Docs: [Params Backup docs](https://www.digigreg.com/en/wiki/params-backup.html)
+- :link: [Project homepage](https://www.digigreg.com/en/products/joomla-plugins/params-backup.html)
+- :link: [JED page](https://extensions.joomla.org/extension/params-backup/)
+- :book: [Documentation](https://www.digigreg.com/en/wiki/params-backup.html)
 
 #### Contributing
 Pull requests with bugfixes and translations are much appreciated. I'll be happy to review them and merge them once they're ready.
 
 #### Images
-![Params Backup logo](https://www.digigreg.com/media/com_osmembership/params-backup.png)
-![Params Backup screenshot 1](https://www.digigreg.com/images/products/params-backup/1-params-backup-save-plugin-settings.jpg)
-![Params Backup screenshot 2](https://www.digigreg.com/images/products/params-backup/2-params-backup-save-template-settings.jpg)
 ![Params Backup screenshot 3](https://www.digigreg.com/images/products/params-backup/3-params-backup-save-component-settings.jpg)
 ![Params Backup screenshot 4](https://www.digigreg.com/images/products/params-backup/4-params-backup-save-module-settings.jpg)
