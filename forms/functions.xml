@@ -3,6 +3,8 @@
 	<fields name="params">
 		<fieldset name="backup" label="PLG_CONTENT_PARAMSBACKUP_TAB" addfieldpath="/plugins/content/paramsbackup/forms">
 			
+			<field name="patchcheck_hidden" type="patchcheck" />
+			
 			<field name="functions" type="functions" />
 			
 		</fieldset>

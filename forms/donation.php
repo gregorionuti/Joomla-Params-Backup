@@ -27,6 +27,7 @@ function donation() {
     	$eth_address = "0xBe43A9F77a80AA064FedAE5B427fd5b3077D2cc0";
     	$paypal_link = 'https://www.paypal.com/paypalme/gregorionuti';
     	$revolut_link = 'https://revolut.me/gregorionuti';
+    	$kofi_link = 'https://ko-fi.com/gregorionuti';
 		$extension_family = 'plugins';
         $plugin_type = 'content';
         $extension_name = 'paramsbackup';
@@ -97,12 +98,6 @@ function donation() {
 				background-repeat: repeat;
 				position: relative;
 				z-index: 0;
-				/*
-				display: flex;
-				align-items: center;
-				justify-content: center;
-				*/
-				min-height: 276px;
 				overflow: hidden;
 				animation: shake 5s;
 				animation-iteration-count: infinite; 
@@ -144,7 +139,7 @@ function donation() {
 			#digigreg_donation .btn-img {
 				width: 16px;
 				height: 16px;
-				margin-right: 2px;
+				margin-right: 5px;
 				margin-top: -3px;
 			}
 			@keyframes pulse {
@@ -193,6 +188,7 @@ function donation() {
         $html .= '<span class="btn-group btn-group-sm mt-1" role="group">';
         $html .= '<a class="btn btn-outline-light" target="_blank" href="'.$paypal_link.'"><img class="btn-img" src="'.URI::root().$extension_family.DS.$plugin_type.DS.$extension_name.DS.'assets'.DS.'images'.DS.'logo-paypal.png" alt="PayPal" />PayPal</a>';
         $html .= '<a class="btn btn-outline-light" target="_blank" href="'.$revolut_link.'"><img class="btn-img" src="'.URI::root().$extension_family.DS.$plugin_type.DS.$extension_name.DS.'assets'.DS.'images'.DS.'logo-revolut.png" alt="Revolut" />Revolut</a>';
+        $html .= '<a class="btn btn-outline-light" target="_blank" href="'.$kofi_link.'"><img class="btn-img" src="'.URI::root().$extension_family.DS.$plugin_type.DS.$extension_name.DS.'assets'.DS.'images'.DS.'logo-ko-fi.png" alt="Ko-fi" />Ko-fi</a>';
         $html .= '</span>';
         $html .= '</div>';
 		$html .= '</div>';

@@ -98,7 +98,6 @@ class plgContentParamsbackup extends JPlugin
 		}
 		if ($exclusions) {
 			$forms_arr_2 = explode(PHP_EOL, $exclusions);
-			//die(var_dump($forms_arr_2));
 			foreach ($forms_arr_2 as $formX) {
 				$show_no[] = trim($formX);
 			}
@@ -109,7 +108,7 @@ class plgContentParamsbackup extends JPlugin
 			// TODO: Get the badge class from a file which generates all the needed classes depending by Joomla version
 			echo '<div class="card mb-3">';
 			echo '<div class="card-header bg-warning">';
-			echo Text::_('PLG_CONTENT_PARAMSBACKUP').' '.Text::_('PLG_CONTENT_PARAMSBACKUP_DEBUG_TITLE');
+			echo Text::_('PLG_CONTENT_PARAMSBACKUP_CLEAN_NAME').' '.Text::_('PLG_CONTENT_PARAMSBACKUP_DEBUG_TITLE');
 			echo '</div>';
 			echo '<ul class="list-group list-group-flush">';
 			echo '<li class="list-group-item">'.Text::_('PLG_CONTENT_PARAMSBACKUP_FIELD_FORM_NAME').': <span class="badge badge-info bg-info">'.$form_name.'</span></li>';

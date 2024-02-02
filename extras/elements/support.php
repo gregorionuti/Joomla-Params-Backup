@@ -28,12 +28,9 @@ class JFormFieldSupport extends JFormField {
     protected function getInput() {
     	
     	// Human defined variables
-		$support_question_link = 'https://www.digigreg.com/#contact-presale';
-    	$support_one_hour_link = 'https://www.digigreg.com/en/products/tech-support/sign-up.html#hours-1';
-    	$support_two_hours_link = 'https://www.digigreg.com/en/products/tech-support/sign-up.html#hours-2';
-    	$support_three_hours_link = 'https://www.digigreg.com/en/products/tech-support/sign-up.html#hours-3';
-    	$support_five_hours_link = 'https://www.digigreg.com/en/products/tech-support/sign-up.html#hours-5';
-    	$support_ten_hours_link = 'https://www.digigreg.com/en/products/tech-support/sign-up.html#hours-10';
+		$github_link = 'https://github.com/gregorionuti/Joomla-Params-Backup';
+		$github_issues_link = 'https://github.com/gregorionuti/Joomla-Params-Backup/issues';
+		$github_pull_link = 'https://github.com/gregorionuti/Joomla-Params-Backup/pulls';
         $extension_family = 'plugins';
         $plugin_type = 'content';
         $extension_name = 'paramsbackup';
@@ -101,12 +98,6 @@ class JFormFieldSupport extends JFormField {
 				background-repeat: repeat;
 				position: relative;
 				z-index: 0;
-				/*
-				display: flex;
-				align-items: center;
-				justify-content: center;
-				*/
-				min-height: 276px;
 				overflow: hidden;
 			}
 			#digigreg_support a[target="_blank"]::before {
@@ -126,19 +117,12 @@ class JFormFieldSupport extends JFormField {
         $html .= '<h2 class="'.$card_title_class.' text-light">'.strToUpper(Text::_($text_prefix.'_SUPPORT_TITLE')).'</h2>';
         $html .= '<p class="'.$card_text_class.' bg-light text-dark rounded p-3">'.Text::_($text_prefix.'_SUPPORT_DESC').'</p>';
 		$html .= '<p class="'.$card_text_class.' bg-warning text-dark rounded p-3">';
-        $html .= '<span class="text-uppercase">'.Text::_($text_prefix.'_SUPPORT_ASK_QUESTION_BEFORE_TO_BUY').'</span> <br />';
-        $html .= '<a class="btn '.$btn_dark_class.' btn-sm mt-1" href="'.$support_question_link.'" target="_blank">'.strToUpper(Text::_($text_prefix.'_SUPPORT_ASK_QUESTION')).'</a> <br /><br />';
-        $html .= '<span class="text-uppercase">'.Text::_($text_prefix.'_SUPPORT_BUY_HOURS').'</span> <br />';
+        $html .= '<span class="text-uppercase">'.Text::_($text_prefix.'_SUPPORT_GO_TO_GITHUB').'</span> <br />';
         $html .= '<span class="btn-group btn-group-sm mt-1 mb-1" role="group">';
-        $html .= '<a class="btn '.$btn_dark_class.'" target="_blank" href="'.$support_one_hour_link .'">'.strToUpper(Text::_($text_prefix.'_SUPPORT_ONE_HOUR')).'</a>';
-        $html .= '<a class="btn '.$btn_dark_class.'" target="_blank" href="'.$support_two_hours_link .'">'.strToUpper(Text::_($text_prefix.'_SUPPORT_TWO_HOURS')).'</a>';
-        $html .= '<a class="btn '.$btn_dark_class.'" target="_blank" href="'.$support_three_hours_link .'">'.strToUpper(Text::_($text_prefix.'_SUPPORT_THREE_HOURS')).'</a>';
-        $html .= '<a class="btn '.$btn_dark_class.'" target="_blank" href="'.$support_five_hours_link .'">'.strToUpper(Text::_($text_prefix.'_SUPPORT_FIVE_HOURS')).'</a>';
-        $html .= '<a class="btn '.$btn_dark_class.'" target="_blank" href="'.$support_ten_hours_link .'">'.strToUpper(Text::_($text_prefix.'_SUPPORT_TEN_HOURS')).'</a>';
+        $html .= '<a class="btn '.$btn_dark_class.' btn-sm mt-1" href="'.$github_link.'" target="_blank">'.strToUpper(Text::_($text_prefix.'_SUPPORT_BROWSE_REPO')).'</a>';
+        $html .= '<a class="btn '.$btn_dark_class.' btn-sm mt-1" href="'.$github_pull_link.'" target="_blank">'.strToUpper(Text::_($text_prefix.'_SUPPORT_PULL_REQUEST')).'</a>';
+        $html .= '<a class="btn '.$btn_dark_class.' btn-sm mt-1" href="'.$github_issues_link.'" target="_blank">'.strToUpper(Text::_($text_prefix.'_SUPPORT_REPORT_BUG')).'</a>';
         $html .= '</span> <br />';
-        $html .= '<span class="text-uppercase">'.Text::_($text_prefix.'_SUPPORT_WORKING_HOURS').'</span> <br /><br />';
-        $html .= '<span class="text-uppercase">'.Text::_($text_prefix.'_SUPPORT_I_THINK_IS_A_BUG').'</span> <br />';
-        $html .= '<a class="btn '.$btn_dark_class.' btn-sm mt-1" href="'.$support_question_link.'" target="_blank">'.strToUpper(Text::_($text_prefix.'_SUPPORT_REPORT_BUG')).'</a>';
         $html .= '</p>';
 		$html .= '</div>';
 		$html .= '</div>';

@@ -28,7 +28,7 @@ class JFormFieldButtons extends JFormField {
     protected function getInput() {
     	
     	// Human defined variables
-		$link_jed = 'https://extensions.joomla.org/profile/profile/details/249047/';
+		$link_jed = 'https://extensions.joomla.org/extension/params-backup/';
 		$link_products = 'https://www.digigreg.com/en/products.html';
 		$link_documentation = 'https://www.digigreg.com/en/wiki/params-backup.html';
 		$link_support = '#digigreg_support';
@@ -89,21 +89,12 @@ class JFormFieldButtons extends JFormField {
         $html .= '</div>';
         
         $html .= '</div>';
-        $html .= '<div class="'.$col_class.'" id="digigreg_button_more">';
-        
-        // Other extensions
-		$html .= '<p class="small">'.Text::_(strToUpper($text_prefix).'_BUTTON_NEED_MORE').'</p>';
-		$html .= '<div class="button-container" id="digigreg_button_more_products">';
-		$html .= '<a class="btn '.$btn_dark_class.' btn-sm" href="'.$link_products.'" target="_blank" title="'.Text::_(strToUpper($text_prefix).'_BUTTON_MORE_EXTENSIONS_DESC').'"><i class="icon-grid"></i> '.Text::_(strToUpper($text_prefix).'_BUTTON_MORE_EXTENSIONS_TITLE').'</a>';
-		$html .= '</div>';
-        
-        $html .= '</div>';
         $html .= '<div class="'.$col_class.'" id="digigreg_button_help">';
         
         // Support
 		$html .= '<p class="small">'.Text::_(strToUpper($text_prefix).'_BUTTON_NEED_HELP').'</p>';
 		$html .= '<div class="button-container" id="digigreg_button_help_links">';
-		$html .= '<a class="btn '.$btn_warning_class.' btn-sm" href="'.$link_support.'" title="'.Text::_(strToUpper($text_prefix).'_BUTTON_BUY_SUPPORT_DESC').'"><i class="icon-cart"></i> '.Text::_(strToUpper($text_prefix).'_BUTTON_BUY_SUPPORT_TITLE').'</a>';
+		$html .= '<a class="btn '.$btn_warning_class.' btn-sm" href="'.$link_support.'" title="'.Text::_(strToUpper($text_prefix).'_BUTTON_BUY_SUPPORT_DESC').'"><i class="icon-warning"></i> '.Text::_(strToUpper($text_prefix).'_BUTTON_BUY_SUPPORT_TITLE').'</a>';
 		$html .= '</div>';
         
         $html .= '</div>';
@@ -115,6 +106,15 @@ class JFormFieldButtons extends JFormField {
 		$html .= '<a class="btn '.$btn_info_class.' btn-sm" href="'.$link_documentation.'" target="_blank" title="'.Text::_(strToUpper($text_prefix).'_BUTTON_READ_DOCS_DESC').'"><i class="icon-file"></i> '.Text::_(strToUpper($text_prefix).'_BUTTON_READ_DOCS_TITLE').'</a>';
 		$html .= '</div>';
 		
+        $html .= '</div>';
+        $html .= '<div class="'.$col_class.'" id="digigreg_button_more">';
+        
+        // Other extensions
+		$html .= '<p class="small">'.Text::_(strToUpper($text_prefix).'_BUTTON_NEED_MORE').'</p>';
+		$html .= '<div class="button-container" id="digigreg_button_more_products">';
+		$html .= '<a class="btn '.$btn_dark_class.' btn-sm" href="'.$link_products.'" target="_blank" title="'.Text::_(strToUpper($text_prefix).'_BUTTON_MORE_EXTENSIONS_DESC').'"><i class="icon-grid"></i> '.Text::_(strToUpper($text_prefix).'_BUTTON_MORE_EXTENSIONS_TITLE').'</a>';
+		$html .= '</div>';
+        
         $html .= '</div>';
         $html .= '</div>';
         $html .= '<hr />';
