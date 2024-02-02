@@ -17,7 +17,7 @@ The tab contains the three main buttons of the plugin: save, load, delete. These
 ![GitHub last commit (branch)](https://img.shields.io/github/last-commit/gregorionuti/Joomla-Params-Backup/main)
 ![GitHub License](https://img.shields.io/github/license/gregorionuti/Joomla-Params-Backup)
 ![Static Badge](https://img.shields.io/badge/joomla-cadetblue?label=platform)
-![Static Badge](https://img.shields.io/badge/3.10%2B%20%7C%204.0%2B-blue?logo=joomla&logoColor=white&label=joomla)
+![Static Badge](https://img.shields.io/badge/3.9%2B%20%7C%204.0%2B-blue?logo=joomla&logoColor=white&label=joomla)
 ![Static Badge](https://img.shields.io/badge/plugin-darkviolet?logo=joomla&logoColor=white&label=type)
 ![Static Badge](https://img.shields.io/badge/7.0%2B%20%7C%208.0%2B-purple?logo=php&logoColor=white&label=php)
 
