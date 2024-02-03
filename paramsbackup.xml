@@ -6,7 +6,7 @@
 	<copyright>Copyright Digigreg 2014-2024</copyright>
 	<authorEmail>info@digigreg.com</authorEmail>
 	<authorUrl>https://www.digigreg.com</authorUrl>
-	<version>1.0.2</version>
+	<version>1.0.3</version>
     <license>GNU General Public License version 2 or later</license>
 	<description>
         <![CDATA[
@@ -26,6 +26,8 @@
     <languages>
 		<language tag="en-GB">language/en-GB/plg_content_paramsbackup.ini</language>
 		<language tag="en-GB">language/en-GB/plg_content_paramsbackup.sys.ini</language>
+		<language tag="nl-NL">language/nl-NL/plg_content_paramsbackup.ini</language>
+		<language tag="nl-NL">language/nl-NL/plg_content_paramsbackup.sys.ini</language>
 	</languages>
     <config>
 		<fields name="params">
