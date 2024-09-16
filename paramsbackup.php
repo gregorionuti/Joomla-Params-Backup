@@ -48,6 +48,7 @@ class plgContentParamsbackup extends JPlugin
 		// Get plugin params
 		$plugin = JPluginHelper::getPlugin('content', 'paramsbackup');
 		$modules = $this->params->get('modules', 0);
+		$modules_backend = $this->params->get('modules_backend', 0);
 		$plugins = $this->params->get('plugins', 0);
 		$templates = $this->params->get('templates', 0);
 		$configurations = $this->params->get('configurations', 0);
@@ -80,6 +81,9 @@ class plgContentParamsbackup extends JPlugin
 		if ($modules == 1) {
 			$show_on[] = 'com_modules.module';
 			$show_on[] = 'com_advancedmodules.module';
+		}
+		if ($modules_backend == 1) {
+			$show_on[] = 'com_modules.module.admin';
 		}
 		if ($plugins == 1) {
 			$show_on[] = 'com_plugins.plugin';
