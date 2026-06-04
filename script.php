@@ -106,7 +106,7 @@ class plgContentParamsbackupInstallerScript {
         $html .= '<div id="digigreg_donation">';
         $html .= '<div id="digigreg_donation_text">';
         $html .= '<h2>Do you like Params Backup?</h2>';
-        $html .= '<p>The development of this extension and its conversion for Joomla 5 took many hours of work. With a small donation, you can help the developer to keep it up to date and tuned up over time. Even € 1 or whatever small amount can help. Thank you so much!<br /><small><i class="text-dark">Greg</i></small>'.'</p>';
+        $html .= '<p>The development of this extension and its conversion for Joomla 6 took many hours of work. With a small donation, you can help the developer to keep it up to date and tuned up over time. Even € 1 or whatever small amount can help. Thank you so much!<br /><small><i class="text-dark">Greg</i></small>'.'</p>';
         $html .= '<p>';
         $html .= '<span class="text-uppercase '.$badge_class.'">Bitcoin address</span> '.$btc_address.' <br /><br />';
         $html .= '<span class="text-uppercase  '.$badge_class.'">Ethereum address</span> '.$eth_address.' <br /><br />';

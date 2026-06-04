@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<extension version="3.9" type="plugin" group="content" method="upgrade">       
+<extension version="5" type="plugin" group="content" method="upgrade">       
     <name>Content - Params Backup</name>
 	<author>Digigreg</author>
-	<creationDate>Sep 2024</creationDate>
-	<copyright>Copyright Digigreg 2014-2024</copyright>
+	<creationDate>Jun 2026</creationDate>
+	<copyright>Copyright Digigreg 2014-2026</copyright>
 	<authorUrl>https://www.digigreg.com</authorUrl>
-	<version>1.0.3</version>
+	<version>1.0.4</version>
     <license>GNU General Public License version 2 or later</license>
 	<description>
         <![CDATA[
@@ -31,8 +31,6 @@
     <config>
 		<fields name="params">
 			<fieldset name="basic" addfieldpath="/plugins/content/paramsbackup/extras/elements">
-				
-				<field name="patch_hidden" type="patch" />
 				
 				<field name="buttons_hidden" type="buttons" />
 				

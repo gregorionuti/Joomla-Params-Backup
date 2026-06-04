@@ -20,6 +20,8 @@ use Joomla\CMS\Factory;
 use Joomla\CMS\Uri\Uri;
 use Joomla\CMS\Language\Text;
 use Joomla\CMS\Form\Form;
+use Joomla\CMS\Plugin\CMSPlugin;
+use Joomla\CMS\Plugin\PluginHelper;
 
 // Load plugin language file - https://docs.joomla.org/Loading_extra_language_files
 $lang = Factory::getLanguage();
@@ -32,7 +34,7 @@ $lang->load($extension, $base_dir, $language_tag, $reload);
 // Import library dependencies
 jimport('joomla.plugin.plugin');
 
-class plgContentParamsbackup extends JPlugin
+class plgContentParamsbackup extends CMSPlugin
 {
 
 	function onContentPrepareForm($form, $data)
@@ -46,7 +48,7 @@ class plgContentParamsbackup extends JPlugin
         $form_name = $form->getName();
 		
 		// Get plugin params
-		$plugin = JPluginHelper::getPlugin('content', 'paramsbackup');
+		$plugin = PluginHelper::getPlugin('content', 'paramsbackup');
 		$modules = $this->params->get('modules', 0);
 		$modules_backend = $this->params->get('modules_backend', 0);
 		$plugins = $this->params->get('plugins', 0);
@@ -61,8 +63,8 @@ class plgContentParamsbackup extends JPlugin
 			return;
 		}
 		
-		// Check if the form is and instance of JForm
-		if (!($form instanceof JForm))
+		// Check if the form is and instance of Form
+		if (!($form instanceof Form))
 		{
 			$this->_subject->setError('JERROR_NOT_A_FORM');
 			return false;
@@ -70,7 +72,7 @@ class plgContentParamsbackup extends JPlugin
 		
 		// Avoid to load the plugin if another instance of the same backup function is already loaded in a Digigreg extension
 		$backup_already_loaded = false;
-		$xml_string = json_encode($data->xml);
+		$xml_string = json_encode($data->xml ?? '');
 		if (strpos($xml_string, 'backup') !== false && strpos($xml_string, 'backup_hidden') !== false && strpos($xml_string, 'digigreg') !== false) {
 			$backup_already_loaded = true;
 		}

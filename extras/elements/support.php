@@ -19,10 +19,11 @@ if(!defined('DS')) define('DS', DIRECTORY_SEPARATOR);
 use Joomla\CMS\Factory;
 use Joomla\CMS\Language\Text;
 use Joomla\CMS\Uri\Uri;
+use Joomla\CMS\Form\FormField;
 
 jimport('joomla.form.formfield');
 
-class JFormFieldSupport extends JFormField {
+class JFormFieldSupport extends FormField {
     protected $type = 'Support';
     
     protected function getInput() {

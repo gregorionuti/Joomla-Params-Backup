@@ -18,10 +18,11 @@ if(!defined('DS')) define('DS', DIRECTORY_SEPARATOR);
 // namespaces
 use Joomla\CMS\Uri\Uri;
 use Joomla\CMS\Factory;
+use Joomla\CMS\Form\FormField;
 
 jimport('joomla.form.formfield');
 
-class JFormFieldAsset extends JFormField {
+class JFormFieldAsset extends FormField {
     protected $type = 'Asset';
     
     protected function getLabel() {

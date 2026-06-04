@@ -19,17 +19,22 @@ if(!defined('DS')) define('DS', DIRECTORY_SEPARATOR);
 use Joomla\CMS\Factory;
 use Joomla\CMS\Language\Text;
 use Joomla\CMS\Uri\Uri;
+use Joomla\CMS\Form\FormField;
+use Joomla\CMS\Plugin\PluginHelper;
+use Joomla\Registry\Registry;
+use Joomla\Filesystem\Folder;
+use Joomla\CMS\HTML\HTMLHelper;
+use Joomla\Filesystem\File;
 
 // Include files
 include_once (__DIR__).'/js.php';
 include_once (__DIR__).'/css.php';
 include_once (__DIR__).'/donation.php';
-include_once (__DIR__).'/support.php';
 
 jimport('joomla.filesystem.file');
 Joomla\CMS\HTML\HTMLHelper::_('jquery.framework');
 
-class JFormFieldFunctions extends JFormField {
+class JFormFieldFunctions extends FormField {
     protected $type = 'Backup';
     
     protected function getInput() {
@@ -40,8 +45,8 @@ class JFormFieldFunctions extends JFormField {
         $db = Factory::getDBO();
         
         // Plugin params
-        $plugin = JPluginHelper::getPlugin('content', 'paramsbackup');
-		$pluginParams = new JRegistry();
+        $plugin = PluginHelper::getPlugin('content', 'paramsbackup');
+		$pluginParams = new Registry();
 		$pluginParams->loadString($plugin->params);
 		$donation = $pluginParams->get('donation', 0);
         
@@ -106,7 +111,7 @@ class JFormFieldFunctions extends JFormField {
         // DEPRECATED: is_numeric($extension_id) because the identificator of com_config is not a numeric ID but is the value of the param component
 		if ($extension_id !== 'none' && $task !== 'none') {
             if ($task == 'load') {
-                if (JFile::exists($base_path . $file)) {
+                if (File::exists($base_path . $file)) {
                 	
                 	// Load file
                 	$file_content = file_get_contents($base_path . $file);
@@ -125,12 +130,12 @@ class JFormFieldFunctions extends JFormField {
                 $result = $db->loadObject();
                 
                 // Write file
-                JFile::write($base_path.$file , $result->params);
+                File::write($base_path.$file , $result->params);
                 
             } else if ($task == 'delete') {
             	
                 // Delete file
-                JFile::delete($base_path.$file);	
+                File::delete($base_path.$file);	
             }
         }
         
@@ -138,8 +143,8 @@ class JFormFieldFunctions extends JFormField {
         $list = (array) $this->getFiles();
         
         // File lists variables
-        $load_file = JHtml::_('select.genericlist', $list, 'load_list', 'class="form-select"', 'value', 'text', 'default', 'backup_load_filename');
-        $delete_file = JHtml::_('select.genericlist', $list, 'delete_list', 'class="form-select"', 'value', 'text', 'default', 'backup_delete_filename');
+        $load_file = HTMLHelper::_('select.genericlist', $list, 'load_list', 'class="form-select"', 'value', 'text', 'default', 'backup_load_filename');
+        $delete_file = HTMLHelper::_('select.genericlist', $list, 'delete_list', 'class="form-select"', 'value', 'text', 'default', 'backup_delete_filename');
         
         // File numbers variables
         $number_of_files = $this->countFiles();
@@ -306,7 +311,7 @@ class JFormFieldFunctions extends JFormField {
         $path = str_replace('forms', '', dirname(__FILE__)).'settings'.DS;
         
         if (!is_dir($path)) $path = JPATH_ROOT.'/'.$path;
-            $files = JFolder::files($path, '.json');
+            $files = Folder::files($path, '.json');
             if (is_array($files)) {
                 foreach($files as $file) {
                 	$count++;
@@ -327,7 +332,7 @@ class JFormFieldFunctions extends JFormField {
         $path = str_replace('forms', '', dirname(__FILE__)).'settings'.DS;
         
         if (!is_dir($path)) $path = JPATH_ROOT.'/'.$path;
-            $files = JFolder::files($path, '.json');
+            $files = Folder::files($path, '.json');
             if (is_array($files)) {
                 foreach($files as $file) {
                 	$filename_arr = explode('-', $file);
@@ -364,12 +369,12 @@ class JFormFieldFunctions extends JFormField {
         $path = str_replace('forms', '', dirname(__FILE__)).'settings'.DS;
         
         if (!is_dir($path)) $path = JPATH_ROOT.'/'.$path;
-            $files = JFolder::files($path, '.json');
+            $files = Folder::files($path, '.json');
             if (is_array($files)) {
                 foreach($files as $file) {
                 	$filename_arr = explode('-', $file);
                 	if ($filename_arr[0] == $option && $filename_arr[1] == $current_id) {
-                		$list[] = JHtml::_('select.option', $file, $this->getCleanFileName($file));
+                		$list[] = HTMLHelper::_('select.option', $file, $this->getCleanFileName($file));
                 	}
                 }
             }
